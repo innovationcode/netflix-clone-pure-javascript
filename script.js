@@ -2,11 +2,11 @@ window.onload = () =>  {
       getOriginals();
       fetchTrendingMovies();
       fetchTopRatedMovies();
-      // getActionMovies();
-      // getCommedyMovies();
-      // getHorrorMovies();
-      // getRomanceMovies();
-      // getDocumentariesMovies();
+      getActionMovies();
+      getCommedyMovies();
+      getHorrorMovies();
+      getRomanceMovies();
+      getDocumentariesMovies();
 }
 
 // Common function to fetch mpvies from provided URL
@@ -58,31 +58,31 @@ function fetchTopRatedMovies(){
 }
 
 // ++++++++++++++++++++++++++++++++++++++++++++  Action Movies  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// function getActionMovies(){
-//       var url = "";
-//       fetchMovies(url, 'action-movies', 'backdrop_path');
-//}
+function getActionMovies(){
+      var url = "https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&with_genres=28";
+      fetchMovies(url, '#action-movies', 'backdrop_path');
+}
 
 // ++++++++++++++++++++++++++++++++++++++++++++  Commedy Movies  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// function getCommedyMovies(){
-//       var url = "";
-//       fetchMovies(url, "comedy-movies", 'backdrop_path');
-//}
+function getCommedyMovies(){
+      var url = "https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&with_genres=35";
+      fetchMovies(url, "#comedy-movies", 'backdrop_path');
+}
 
 // ++++++++++++++++++++++++++++++++++++++++++++  Horror  Movies  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// function getHorrorMovies(){
-//       var url = "";
-//       fetchMovies(url, "horror-movies", 'backdrop_path');
-// }
+function getHorrorMovies(){
+      var url = "https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&with_genres=27";
+      fetchMovies(url, "#horror-movies", 'backdrop_path');
+}
 
 // ++++++++++++++++++++++++++++++++++++++++++++  Romance  Movies  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// function getRomanceMovies(){
-//       var url = "";
-//       fetchMovies(url, "romance-movies", 'backdrop_path');
-// }
+function getRomanceMovies(){
+      var url = "https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&with_genres=10749";
+      fetchMovies(url, "#romance-movies", 'backdrop_path');
+}
 
 // ++++++++++++++++++++++++++++++++++++++++++++  Documentaries Movies  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-// function getDocumentariesMovies(){
-//       var url = "";
-//       fetchMovies(url, "documentaries", 'backdrop_path');
-// }
+function getDocumentariesMovies(){
+      var url = "https://api.themoviedb.org/3/discover/movie?api_key=19f84e11932abbc79e6d83f82d6d1045&with_genres=99";
+      fetchMovies(url, "#documentaries", 'backdrop_path');
+}
