@@ -118,10 +118,17 @@ header {
       overflow-y: hidden;
       overflow-x: scroll;
       padding: 23px;
+      /*FireFox*/
+      scrollbar-width: none;
+      /* scrollbar-color: #112 #111; */
 }
 
 .original__movies::-webkit-scrollbar, .movies__container::-webkit-scrollbar {
       display: none;
+}
+
+.original__movies, .movies__container { 
+      overflow: -moz-scrollbars-none; 
 }
 
 .original__movies img, .movies__container img {
