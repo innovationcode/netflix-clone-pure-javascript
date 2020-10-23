@@ -7,8 +7,17 @@ window.onload = () =>  {
       getHorrorMovies();
       getRomanceMovies();
       getDocumentariesMovies();
+      headerSelect();
+
 }
 
+function headerSelect() {
+      var header = document.getElementById('logo-header');
+      console.log("HEADER  ---------- ",header)
+      if (document.onkeydown  ) {
+            header.style.background = "red";
+      }
+}
 // Common function to fetch mpvies from provided URL
 function fetchMovies(url, element_selector, path_type) {
       fetch(url)
